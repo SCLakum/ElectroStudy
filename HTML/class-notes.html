@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Electro Study</title>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <Script>
+    $(function () {
+      $('#header').load('/header.html')
+    })
+  </Script>
+  <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="header"></div>
+  <h1 class="Page_Head">Class Notes</h1>
+
+  <div class="Class_Note">
+    <div class="container_card">
+      <div id="cards-container" class="cards grid-row"></div>
+    </div>
+  </div>
+
+  <div class="event__search__floater">
+    <div class="search__anchor">
+      <form id="event-search-form" action="get">
+        <input type="text" id="filterTitle" class="search__bar" placeholder="Search By Leacture No, Date Or Topic Name">
+        <input class="search__submit" type="submit">
+        <div class="search__toggler"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/JS/Class_note.js"></script>
+</body>
+
+</html>

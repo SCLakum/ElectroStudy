@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Electro Study</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="stylesheet" href="/code_style.css">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <Script>
+    $(function () {
+      $('#header').load('/header.html')
+    })
+  </Script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="header"></div>
+  <div class="Jav_Code">
+    <div class="container_code">
+      <div class="code-wrape">
+        <div>
+          <h1 class="Page_Head">Pair Of Int From Array</h1>
+          <div>
+            <p1 class="program_discription"> Here The Length Of Array, Expected Sum Of Pair And Array of integer Are
+              Input Ad in Output You Get List Of Pair which sum is equal to given Expected Sum From Given Array. </p1>
+          </div>
+        </div>
+        <pre><div>Java Code <button id="copy-button">Copy Code</button></div><code id="code" class="language-java">
+import java.util.Scanner;
+public class Main{
+    public static void Pair_Equal_To_Sum(int ArrayLength, int Sum) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Inter Your Integer Array Element One By one");
+        int IntArray[] = new int[ArrayLength];
+        for (int i = 0; i < ArrayLength; i++) {
+            IntArray[i] = sc.nextInt();
+        }
+        int NumPair = 0;
+        for (int i = 0; i&lt;ArrayLength; i++) {
+            int ArrayElem = IntArray[i];
+            for (int j = 0; j&lt;ArrayLength; j++) {
+                if (j != i) {
+                    if ((IntArray[i] + IntArray[j]) == Sum) {
+                        if (IntArray[i]&lt;IntArray[j]) {
+                            System.out.println(IntArray[i] + " " + IntArray[j]);
+                            NumPair++;
+                        }
+                    }
+                }
+            }
+        }
+        System.out.println("Number Of Pair =" + NumPair);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Length Of Array :");
+        int arrLength = sc.nextInt();
+        System.out.print("Enter Sum Of Pair :");
+        int Sum = sc.nextInt();
+        Pair_Equal_To_Sum(arrLength,Sum);
+    }
+}</code></pre>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/code_script.js"></script>
+<script src="/script.js"></script>
+
+</html>

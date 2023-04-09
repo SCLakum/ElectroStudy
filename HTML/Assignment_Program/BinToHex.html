@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Electro Study</title>
+  <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+  <link rel="stylesheet" href="/CSS/code_style.css">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <Script>
+    $(function () {
+      $('#header').load('/header.html')
+    })
+  </Script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="header"></div>
+  <h1 class="Page_Head">Area of Square </h1>
+
+  <div id="Full_program_discription_Container">
+    <div id="Full_program_discription">
+      <div class="Space_add">
+        <p><strong>Problem Statement</strong></p>
+        <p>Given a side of a square, your task is to calculate its area.</p>
+      </div>
+      <p><strong>Input:</strong></p>
+      <p>The first line of the input contains the side of the square.</p>
+      <p><strong>Output:</strong> You just have to print the area of a square</p>
+      <p><strong>Algorithm:</strong></p>
+      <ol>
+        <li>Read the input integer representing the length of the square's side.</li>
+        <li>Calculate the area of the square by multiplying the side length by itself.</li>
+        <li>Output the result as a single integer.</li>
+      </ol>
+      <p><strong>Example:</strong></p>
+      <p>Sample Input:<br>
+        3</p>
+      <p>Sample Output:<br>
+        9</p>
+      <p>Sample Input:<br>
+        6</p>
+      <p>Sample Output:<br>
+        36</p>
+    </div>
+  </div>
+
+  <div class="Jav_Code">
+    <div class="container_code">
+      <div class="code-wrape">
+        <pre><div>Java Code <button id="copy-button">Copy Code</button> <button id="copy-button">Open Play Ground</button> <button id="copy-button" onclick="window.location.href='#Full_program_discription';" >Code Explanation</button></div> <code id="code" class="language-java">
+import java.io.*;
+import java.util.*;
+
+class Main {
+
+    public static int Square_Area(int Side){
+      int Area = Side*Side;
+      return Area;
+    }
+
+    public static void main (String[] args) {
+      Scanner SC = new Scanner(System.in);
+      int Side = SC.nextInt();
+      System.out.print(Square_Area(Side));
+    }
+}</code></pre>
+      </div>
+    </div>
+  </div>
+  <div class="blank_Div"></div>
+  <div id="Full_program_discription_Container">
+    <div id="Full_program_discription">
+      <ul>
+        <Li>The BinToHex function takes a binary number as a string input and returns its hexadecimal equivalent as
+          a
+          string.</Li>
+        <Li>The first thing the function does is to check the length of the binary number. If it is not a multiple
+          of 4,
+          then it adds extra zeros to the left of the binary number to make its length a multiple of 4. This is
+          because
+          each hexadecimal digit represents 4 bits, so the binary number needs to be divided into groups of 4 bits
+          to
+          convert it into hexadecimal form.</Li>
+        <Li>Next, the function initializes a new string called NewString and sets its value to an empty string. It
+          also
+          initializes a variable i to 4, which will be used to extract 4 bits at a time from the binary number.</Li>
+        <Li>The function then enters a while loop that will continue until i is greater than or equal to the length
+          of
+          the binary number. Inside the loop, it extracts 4 bits from the binary number starting from the right end
+          of
+          the string. It does this using the substring function and stores the extracted bits in a temporary string
+          variable called TempNum.</Li>
+        <Li>Next, the function converts TempNum from binary to decimal using the parseInt function and then converts
+          the
+          decimal number to its hexadecimal equivalent using the toHexString function. The resulting hexadecimal
+          digit
+          is then concatenated to the left of NewString.</Li>
+        <Li>After the loop completes, the function prints the original binary number and its hexadecimal equivalent
+          to
+          the console and returns the hexadecimal equivalent string.</Li>
+        <Li>Finally, in the main function, the code takes a binary number as input from the user using the Scanner
+          class
+          and passes it to the BinToHex function. The function then returns the hexadecimal equivalent of the binary
+          number, which is printed to the console.</Li>
+      </ul>
+    </div>
+  </div>
+</body>
+<script src="/JS/code_script.js"></script>
+<script src="/JS/script.js"></script>
+
+</html>

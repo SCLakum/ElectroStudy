@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Electro Study</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="stylesheet" href="/code_style.css">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <Script>
+    $(function () {
+      $('#header').load('/header.html')
+    })
+  </Script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="header"></div>
+  <div class="Jav_Code">
+    <div class="container_code">
+      <div class="code-wrape">
+        <div>
+          <h1 class="Page_Head">Volume Of Sphere</h1>
+          <div>
+            <p1 class="program_discription"> Here User Input Is Radius of Sphere And Output Is Volume Of Sphere.</p1>
+          </div>
+        </div>
+        <pre><div>Java Code <button id="copy-button">Copy Code</button></div><code id="code" class="language-java">
+import java.util.Scanner;
+public class Main{
+    public static float Volume_Sphere(int Radius){
+        float pi = 22f/7;
+        float Volume = (4f/3)*pi*Radius*Radius*Radius; //  (4/3)πr3
+        return Volume;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Radius of Sphere:");
+        int Radius = sc.nextInt();
+        System.out.println("Volume :"+ Volume_Sphere(Radius));
+    }
+}</code></pre>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/code_script.js"></script>
+<script src="/script.js"></script>
+
+</html>

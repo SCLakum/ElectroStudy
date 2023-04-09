@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Electro Study</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="stylesheet" href="/code_style.css">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <Script>
+    $(function () {
+      $('#header').load('/header.html')
+    })
+  </Script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="header"></div>
+  <div class="Jav_Code">
+    <div class="container_code">
+      <div class="code-wrape">
+        <div>
+          <h1 class="Page_Head">Binary number To Octa Converter</h1>
+          <div>
+            <p1 class="program_discription"> Here User Input Is Binary Number As a String And The Output Of Program Is
+              Octa Number.</p1>
+          </div>
+        </div>
+        <pre><div>Java Code <button id="copy-button">Copy Code</button></div><code id="code" class="language-java">
+import java.util.Scanner;
+public class Main {
+    public static String BinToOcta(String binary){
+            int Len1 = binary.length();
+            String New_Bin = "";
+            if (Len1 % 3 != 0) {
+                if (Len1 % 3 == 2) {
+                    New_Bin = "0" + binary;
+                }
+                if (Len1 % 3 == 1) {
+                    New_Bin = "00" + binary;
+                }
+            }
+            else {
+                New_Bin = binary;
+            }
+            int Len = New_Bin.length();
+            String NewString = "";
+            int i=3;
+            while(i<=Len){
+                String TempNum = New_Bin.substring(Len-i,Len-i+3);
+                int decimal = Integer.parseInt(TempNum, 2);
+                NewString = decimal + NewString;
+                i=i+3;
+            }
+            System.out.println(NewString);
+            return NewString;
+        }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String binary = sc.nextLine();
+        BinToOcta(binary);
+    }
+}</code></pre>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/code_script.js"></script>
+<script src="/script.js"></script>
+
+</html>
